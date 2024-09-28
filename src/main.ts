@@ -1,4 +1,5 @@
 import Fastify from "fastify";
+import Config, { Player } from "./Config.js";
 
 
 type User = {
@@ -24,6 +25,18 @@ async function main() {
     }
     // Server is now listening on ${address}
   })
+
+  const config: Config = {
+    name: "asdasd",
+    version: "1.2.0",
+  };
+
+  const player1 = new Player();
+  console.log(player1.health);
+  player1.damage(10);
+  console.log(player1.health);
+
+  console.log(config);
 
   const user: User = {
     age: 24,
