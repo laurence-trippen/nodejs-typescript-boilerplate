@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "npx tsc-watch --onSuccess \"node ./dist/main.js\"",
+    "dev:tsx": "npx concurrently \"npx tsc --watch --noEmit\" \"npx tsx watch src/main.ts\"",
+    "dev:tsc": "npx concurrently \"npx tsc --watch \" \"nodemon ./dist/main.js\""
+  },
+  "author": "Laurence Trippen",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.7",
+    "tsc-watch": "^6.2.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "fastify": "^5.0.0"
+  }
+}
