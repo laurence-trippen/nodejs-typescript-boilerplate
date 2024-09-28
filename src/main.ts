@@ -46,4 +46,4 @@ async function main() {
   console.log("Hello TypeScript 2!", user);
 }
 
-main().catch(err => console.error());
+main().catch(err => console.error(err));

@@ -8,7 +8,8 @@
     "build": "npx tsc",
     "dev": "npx tsc-watch --onSuccess \"node ./dist/main.js\"",
     "dev:tsx": "npx concurrently \"npx tsc --watch --noEmit\" \"npx tsx watch src/main.ts\"",
-    "dev:tsc": "npx concurrently \"npx tsc --watch \" \"nodemon ./dist/main.js\""
+    "dev:tsc": "npx concurrently \"npx tsc --watch \" \"nodemon ./dist/main.js\"",
+    "lint": "npx eslint"
   },
   "author": "Laurence Trippen",
   "license": "ISC",
