@@ -1,7 +1,6 @@
 import Fastify from "fastify";
 import Config, { Player } from "./Config.js";
 
-
 type User = {
   name: string;
   age: number;
@@ -13,18 +12,18 @@ async function main() {
   });
 
   // Declare a route
-  fastify.get('/', function (request, reply) {
-    reply.send({ hello: 'world' })
-  })
+  fastify.get("/", function (request, reply) {
+    reply.send({ hello: "world" });
+  });
 
   // Run the server!
   fastify.listen({ port: 3000 }, function (err, address) {
     if (err) {
-      fastify.log.error(err)
-      process.exit(1)
+      fastify.log.error(err);
+      process.exit(1);
     }
     // Server is now listening on ${address}
-  })
+  });
 
   const config: Config = {
     name: "asdasd",
@@ -46,4 +45,4 @@ async function main() {
   console.log("Hello TypeScript 2!", user);
 }
 
-main().catch(err => console.error(err));
+main().catch((err) => console.error(err));
