@@ -1,8 +1,9 @@
 {
   "name": "nodejs-typescript-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "My Node.js TypeScript basic boilerplate.",
   "type": "module",
+  "private": true,
   "main": "src/main.ts",
   "scripts": {
     "build": "npx tsc",
